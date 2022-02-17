@@ -1,18 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tennis App - Codium</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-</head>
-<body>
-  <h1 class="text-center">Welcome to Tennis App</h1>
-  <script src="./app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tennis App - Codium</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./app.css" />
+  </head>
+  <body>
+    <h1 class="text-center">Welcome to Tennis App</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">Roger Federer</h5>
+              <div class="card-image mb-3 mt-3">
+                <img
+                  src="http://www.atpworldtour.com/-/media/images/news/2017/08/11/20/44/federer-montreal-2017-friday.jpg"
+                />
+              </div>
+              <p class="card-text">
+                Has dependable strokes, including directional control and depth
+                on both forehand and backhand sides plus the ability to use
+                lobs, overheads, approach shots and volleys with some success.
+                May be starting to master the use of power and spins (though
+                tends to over-hit difficult shots).
+              </p>
+              <div class="text-center">
+                <button class="btn btn-primary btn-lg btn-block">
+                  Add point
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title text-center">Result</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">Rafa Nadal</h5>
+              <div class="card-image mb-3 mt-3">
+                <img
+                  src="http://www.atpworldtour.com/-/media/images/news/2017/07/10/21/54/nadal-wimbledon-2017-monday-2.jpg"
+                />
+              </div>
+              <p class="card-text">
+                Starting to master the use of power and spins; can handle pace,
+                has sound footwork, can control depth of shots and is beginning
+                to vary game plan according to opponents. Can hit first serves
+                with power and accuracy and place the second serve. May have
+                played varsity or college club tennis.
+              </p>
+              <div class="text-center">
+                <button class="btn btn-primary btn-lg btn-block">
+                  Add point
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
 </html>
