@@ -19,14 +19,18 @@
     <link rel="stylesheet" href="./app.css" />
   </head>
   <body>
-    <h1 class="text-center">Welcome to Tennis App</h1>
+    <h1 class="text-center p-4 mb-2 text-primary">Welcome to Tennis App</h1>
     <div class="container">
       <div class="row mt-5">
         <div class="col-sm-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title text-center">Roger Federer</h5>
-              <div class="card-image mb-3 mt-3">
+              <h5
+                class="card-title text-center card-title text-center p-3 mb-2 bg-light text-dark"
+              >
+                Roger Federer
+              </h5>
+              <div class="card-image mb-5">
                 <img
                   src="http://www.atpworldtour.com/-/media/images/news/2017/08/11/20/44/federer-montreal-2017-friday.jpg"
                 />
@@ -39,7 +43,10 @@
                 tends to over-hit difficult shots).
               </p>
               <div class="text-center">
-                <button class="btn btn-primary btn-lg btn-block">
+                <button
+                  class="btn btn-primary btn-lg btn-block"
+                  id="addPointPlayerOne"
+                >
                   Add point
                 </button>
               </div>
@@ -49,8 +56,9 @@
 
         <div class="col-sm-4">
           <div class="card">
-            <div class="card-body">
-              <p class="card-title text-center">Result</p>
+            <div class="card-body p-3 mb-2 bg-secondary text-white">
+              <p class="card-title text-center text-uppercase">Result</p>
+              <p id="score" class="text-center p-3 mb-2 bg-dark text-white"></p>
             </div>
           </div>
         </div>
@@ -58,8 +66,12 @@
         <div class="col-sm-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title text-center">Rafa Nadal</h5>
-              <div class="card-image mb-3 mt-3">
+              <h5
+                class="card-title text-center card-title text-center p-3 mb-2 bg-light text-dark"
+              >
+                Rafa Nadal
+              </h5>
+              <div class="card-image mb-5">
                 <img
                   src="http://www.atpworldtour.com/-/media/images/news/2017/07/10/21/54/nadal-wimbledon-2017-monday-2.jpg"
                 />
@@ -69,10 +81,13 @@
                 has sound footwork, can control depth of shots and is beginning
                 to vary game plan according to opponents. Can hit first serves
                 with power and accuracy and place the second serve. May have
-                played varsity or college club tennis.
+                played varsity .
               </p>
               <div class="text-center">
-                <button class="btn btn-primary btn-lg btn-block">
+                <button
+                  class="btn btn-primary btn-lg btn-block"
+                  id="addPointPlayerTwo"
+                >
                   Add point
                 </button>
               </div>
