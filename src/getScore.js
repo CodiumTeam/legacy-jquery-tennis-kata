@@ -55,3 +55,8 @@ function getScore(m_score1, m_score2) {
 
   return score;
 }
+
+// THIS IS A HACK FOR TESTING PURPOSES ONLY!!!
+try {
+  exports.getScore = getScore;
+} catch (e) {}
