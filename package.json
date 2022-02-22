@@ -1,10 +1,13 @@
 {
   "name": "tennis-jquery-app",
   "version": "0.0.1",
-  "description": "Working with legacy code - Tennin Kata",
+  "description": "Working with legacy code - Tennis Kata",
   "main": "app.js",
   "scripts": {
-    "start": "light-server -s ./src -p 8080"
+    "start": "light-server -s ./src -p 8080",
+    "cypress:open": "cypress open",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [
     "Legacy",
@@ -15,10 +18,10 @@
   "author": "Codium <info@codium.team>",
   "license": "MIT",
   "dependencies": {
-    "light-server": "^2.9.1"
+    "light-server": "2.9.1"
   },
   "devDependencies": {
-    "cypress": "^9.5.0",
-    "jest": "^27.5.1"
+    "cypress": "9.5.0",
+    "jest": "27.5.1"
   }
 }
