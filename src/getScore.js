@@ -2,7 +2,7 @@ function getScore(m_score1, m_score2) {
   var score = '';
 
   if (hasSameScore(m_score1, m_score2)) {
-    score = calculateSameScore(m_score1, score);
+    score = calculateSameScore(m_score1);
   } else if (isAdvantageOrWin(m_score1, m_score2)) {
     score = calculateAdvantageOrWinScore(m_score1, m_score2, score);
   } else {
@@ -16,22 +16,10 @@ function hasSameScore(m_score1, m_score2) {
   return m_score1 === m_score2;
 }
 
-function calculateSameScore(m_score1, score) {
-  switch (m_score1) {
-    case 0:
-      score = 'Love-All';
-      break;
-    case 1:
-      score = 'Fifteen-All';
-      break;
-    case 2:
-      score = 'Thirty-All';
-      break;
-    default:
-      score = 'Deuce';
-      break;
-  }
-  return score;
+function calculateSameScore(m_score1) {
+  var scores = ['Love-All', 'Fifteen-All', 'Thirty-All'];
+
+  return scores[m_score1] || 'Deuce';
 }
 
 function isAdvantageOrWin(m_score1, m_score2) {
