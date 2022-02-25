@@ -1,15 +1,17 @@
 $(function () {
   var addPointPlayerOne = $('#addPointPlayerOne');
   var addPointPlayerTwo = $('#addPointPlayerTwo');
-  var m_score1 = 0;
-  var m_score2 = 0;
 
-  var score = getScore(m_score1, m_score2);
+  var game = tennis();
+
+  var score = game.getScore();
+
   $('#score').text(`${score}`);
 
   addPointPlayerOne.on('click', function () {
-    m_score1 += 1;
-    var score = getScore(m_score1, m_score2);
+    game.addPointForPlayerOne();
+
+    var score = game.getScore();
     $('#score').text(`${score}`);
 
     var scoreResult = $('#score').text();
@@ -21,8 +23,9 @@ $(function () {
   });
 
   addPointPlayerTwo.on('click', function () {
-    m_score2 += 1;
-    var score = getScore(m_score1, m_score2);
+    game.addPointForPlayerTwo();
+    var score = game.getScore();
+
     $('#score').text(`${score}`);
 
     var scoreResult = $('#score').text();
