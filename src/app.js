@@ -4,19 +4,14 @@ $(function () {
 
   var game = tennis();
 
-  var score = game.getScore();
-
-  $('#score').text(`${score}`);
+  $('#score').text(game.getScore());
 
   addPointPlayerOne.on('click', function () {
     game.addPointForPlayerOne();
 
-    var score = game.getScore();
-    $('#score').text(`${score}`);
+    $('#score').text(game.getScore());
 
-    var scoreResult = $('#score').text();
-
-    if (scoreResult.indexOf('Win') !== -1) {
+    if (game.getScore().indexOf('Win') !== -1) {
       addPointPlayerOne.prop('disabled', true);
       addPointPlayerTwo.prop('disabled', true);
     }
@@ -24,13 +19,10 @@ $(function () {
 
   addPointPlayerTwo.on('click', function () {
     game.addPointForPlayerTwo();
-    var score = game.getScore();
 
-    $('#score').text(`${score}`);
+    $('#score').text(game.getScore());
 
-    var scoreResult = $('#score').text();
-
-    if (scoreResult.indexOf('Win') !== -1) {
+    if (game.getScore().indexOf('Win') !== -1) {
       addPointPlayerOne.prop('disabled', true);
       addPointPlayerTwo.prop('disabled', true);
     }
