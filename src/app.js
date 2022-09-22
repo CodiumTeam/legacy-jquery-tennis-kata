@@ -4,11 +4,14 @@ $(function () {
   var m_score1 = 0;
   var m_score2 = 0;
 
-  getScore(m_score1, m_score2);
+  var score = getScore(m_score1, m_score2);
+  $('#score').text(score);
 
   addPointPlayerOne.on('click', function () {
     m_score1 += 1;
-    getScore(m_score1, m_score2);
+    var score = getScore(m_score1, m_score2);
+    $('#score').text(score);
+
     var scoreResult = $('#score').text();
 
     if (scoreResult.indexOf('Win') !== -1) {
@@ -19,7 +22,8 @@ $(function () {
 
   addPointPlayerTwo.on('click', function () {
     m_score2 += 1;
-    getScore(m_score1, m_score2);
+    var score = getScore(m_score1, m_score2);
+    $('#score').text(score);
 
     var scoreResult = $('#score').text();
 
@@ -36,28 +40,28 @@ function getScore(m_score1, m_score2) {
   if (m_score1 === m_score2) {
     switch (m_score1) {
       case 0:
-        $('#score').text('Love-All');
+        score = 'Love-All';
         break;
       case 1:
-        $('#score').text('Fifteen-All');
+        score = 'Fifteen-All';
         break;
       case 2:
-        $('#score').text('Thirty-All');
+        score = 'Thirty-All';
         break;
       default:
-        $('#score').text('Deuce');
+        score = 'Deuce';
         break;
     }
   } else if (m_score1 >= 4 || m_score2 >= 4) {
     var minusResult = m_score1 - m_score2;
     if (minusResult === 1) {
-      $('#score').text('Advantage player1');
+      score = 'Advantage player1';
     } else if (minusResult === -1) {
-      $('#score').text('Advantage player2');
+      score = 'Advantage player2';
     } else if (minusResult >= 2) {
-      $('#score').text('Win for player1');
+      score = 'Win for player1';
     } else {
-      $('#score').text('Win for player2');
+      score = 'Win for player2';
     }
   } else {
     for (var i = 1; i < 3; i++) {
@@ -82,7 +86,7 @@ function getScore(m_score1, m_score2) {
           break;
       }
     }
-
-    $('#score').text(score);
   }
+
+  return score;
 }
